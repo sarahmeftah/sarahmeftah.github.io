@@ -1,0 +1,36 @@
+doctype html
+html
+	block vars
+	head
+		title Sarah Meftah - #{title}
+		
+		
+		//- CSS
+		link(type='text/css' rel='stylesheet' href='/css/main.css')
+		block localCSS
+			
+	body
+		#sideNav
+			.title Sarah Meftah
+			ul
+				li
+					span PROJECTS
+					ul
+						li NEW AMERICAN LANDSCAPE
+						li YEAR 2000
+						li SHE ISFELT
+				li
+					span INFO
+					ul
+						li BIO
+						li CONTACT
+		
+		#content
+			block content
+		
+		
+		
+		//- JAVASCRIPT
+		script(src='/js/main.js')
+		block localJS
+			

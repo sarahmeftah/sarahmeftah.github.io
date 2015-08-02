@@ -1,0 +1,1 @@
+{"version":3,"sources":["partials/base.scss"],"names":[],"mappings":"AAAM,UACL,SACA,UACA,WACA,WAAa,CAGd,KACC,wBAA0B,CADrB","file":"main.css","sourcesContent":["html, body {\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n\twidth: 100%;\r\n\theight: 100%;\r\n}\r\n\r\nbody {\r\n\tbackground-color: #F2F2F2;\r\n}\r\n"],"sourceRoot":"/source/"}
