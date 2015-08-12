@@ -6,31 +6,38 @@ html
 		
 		
 		//- CSS
+		link(type='text/css' rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
 		link(type='text/css' rel='stylesheet' href='/css/main.css')
 		block localCSS
-			
+	
+	
 	body
-		#sideNav
-			.title Sarah Meftah
-			ul
-				li
-					span PROJECTS
-					ul
-						li NEW AMERICAN LANDSCAPE
-						li YEAR 2000
-						li SHE ISFELT
-				li
-					span INFO
-					ul
-						li BIO
-						li CONTACT
+		#wrapper
+			#sidebar-wrapper
+				ul.sidebar-nav
+					li.sidebar-brand: a(href="/index.html") SARAH MEFTAH
+					
+					li.divider: span PROJECTS
+					li: a(href='/projects/newAmericanLandscape.html') NEW AMERICAN LANDSCAPE
+					li: a(href='/projects/year2000.html') YEAR 2000
+					li: a(href='/projects/sheisfelt.html') SHE ISFELT
+					li: a(href='/projects/boys.html') BOYS
+					li: a(href='/projects/california.html') CALIFORNIA
+					
+					li.divider: span INFO
+					li: a(href='/info/bio.html') BIO
+					li: a(href='/info/contact.html') CONTACT
+						
 		
-		#content
-			block content
-		
+			#page-content-wrapper
+				#content.container-fluid
+					block content
+			
 		
 		
 		//- JAVASCRIPT
+		script(src='/bower_components/jquery/dist/jquery.min.js')
+		script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
 		script(src='/js/main.js')
 		block localJS
 			

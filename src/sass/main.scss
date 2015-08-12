@@ -1,6 +1,10 @@
 
-// Vars
+
+$base-background: #F2F2F2;
+$base-fontSize: 14px;
 
 
+@import 'vender/startbootstrap-simple-sidebar';
 @import 'partials/base';
-@import 'partials/sideNav';
+@import 'partials/layout';
+@import 'partials/artwork';

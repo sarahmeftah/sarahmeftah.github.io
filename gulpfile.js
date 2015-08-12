@@ -36,7 +36,7 @@ gulp.task('clean', function() {
 	return gulp.src([
 			dirs.pub + '/css/**/*',
 			dirs.pub + '/js/**/*',
-			dirs.pub + '/**.html'
+			dirs.pub + '/**/*.html'
 		])
 		.pipe(clean({
 			force: true,
@@ -47,7 +47,9 @@ gulp.task('clean', function() {
 gulp.task('sass', ['clean'], function() {
 	return gulp.src(dirs.src + '/sass/**/*.scss')
 		.pipe(sourcemaps.init())
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(sass.sync({
+			outputStyle: 'compressed',
+		}).on('error', sass.logError))
 		.pipe(autoprefixer({
 			cascade: false
 		}))
@@ -95,7 +97,7 @@ gulp.task('default', ['sass', 'jade', 'coffee'], function() {
 });
 
 gulp.task('watch', ['default'], function(){
-	gulp.watch([
+	return gulp.watch([
 		dirs.src + '/**/*'
 	], ['default']);
 });
