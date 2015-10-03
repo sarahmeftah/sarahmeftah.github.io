@@ -13,25 +13,26 @@ html
 	
 	body
 		#wrapper
+			#topbar-wrapper
+				span.topbar-brand: a(href="/index.html") Sarah Meftah
+				button.btn(type='button' aria-label='Menu')
+					span.glyphicon.glyphicon-menu-hamburger(aria-hidden='true')
 			#sidebar-wrapper
 				ul.sidebar-nav
-					li.sidebar-brand: a(href="/index.html") SARAH MEFTAH
+					li.divider: span Projects
+					li: a(href='/projects/newAmericanLandscape.html') New American Landscape
+					li: a(href='/projects/year2000.html') Year 2000
+					//- li: a(href='/projects/sheisfelt.html') She Isfelt
+					//- li: a(href='/projects/boys.html') Boys
+					//- li: a(href='/projects/california.html') California
 					
-					li.divider: span PROJECTS
-					li: a(href='/projects/newAmericanLandscape.html') NEW AMERICAN LANDSCAPE
-					li: a(href='/projects/year2000.html') YEAR 2000
-					li: a(href='/projects/sheisfelt.html') SHE ISFELT
-					li: a(href='/projects/boys.html') BOYS
-					li: a(href='/projects/california.html') CALIFORNIA
-					
-					li.divider: span INFO
-					li: a(href='/info/bio.html') BIO
-					li: a(href='/info/contact.html') CONTACT
+					li.divider: span Info
+					li: a(href='/info/bio.html') Bio
+					li: a(href='/info/contact.html') Contact
 						
 		
-			#page-content-wrapper
-				#content.container-fluid
-					block content
+			#page-content-wrapper.container-fluid
+				block content
 			
 		
 		

@@ -12,6 +12,23 @@ Main
  */
 
 (function() {
-  console.log('working');
+  var pContent, pInfo, sideBar;
+
+  pInfo = $('.page-info');
+
+  pContent = $('.page-content');
+
+  sideBar = $('#wrapper');
+
+  $('#topbar-wrapper button').click(function(ev) {
+    ev.preventDefault();
+    return sideBar.toggleClass('toggled');
+  });
+
+  $(window).scroll(function() {
+    return pInfo.css('left', $(this).scrollLeft());
+  });
+
+  $(document).load(function() {});
 
 }).call(this);

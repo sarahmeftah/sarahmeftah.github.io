@@ -1,3 +1,40 @@
-.artwork {
-	background-size: cover;
+.art {
+	display: block;
+	background-size: contain;	
+	height: auto;
+	width: 100%;
 }
+.art-thumb {
+	display: inline-block;
+	width: $base-art-maxThumbWidth;
+	height: auto;
+	padding-right: $base-padding;
+}
+
+.art-cover {
+	display: block;
+	background-image: url('/art/california/image2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	min-height: 100%;
+	
+	height: auto;
+	width: 100%;
+}
+
+// @each $project in (
+// 	boys 2,
+// 	california 5,
+// 	newAmericanLandscape 9,
+// 	sheisfelt 5,
+// 	year2000 7
+// ) {
+// 	@for $i from 1 through nth($project, 2) {
+// 		.art-#{nth($project, 1)}-#{$i} {
+// 			background-image: #{"url('/art/" + nth($project, 1) + "/image" + $i + ".jpg')"};
+// 			background-repeat: no-repeat;
+// 		}
+// 	}
+	
+// }

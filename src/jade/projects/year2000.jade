@@ -8,3 +8,10 @@ block vars
 
 block content
 	h1 Year 2000
+	p Year 2000 is an exploration in photographic image-making. This project was drawn from research in the tableaux vivant throughout art history and cinema. These carefully arranged landscapes capture the banality of the recent past. From subtle staging to costuming the figures, these images capture a sense of heightened realism through everyday gestures.
+	
+	- var i = 0
+	while i < 7
+		- i += 1
+	
+		img.art-thumb(src='/art/year2000/thumbs/image#{i}.jpg')

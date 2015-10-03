@@ -7,4 +7,12 @@ block vars
 
 
 block content
-	h1 New American Landscape
+	.page-info
+		h1 New American Landscape
+		p New American Landscape is a survey of contemporary physical, social, and cultural environments. It documents diverse landscapes and the individuals that exist in those spaces. These images document realism through fragmented, tableau-like cinematic images that inhabit the gap between the simulated and real space.
+	
+	.page-content
+		- var i = 10
+		while i > 1
+			- i -= 1
+			img.art-thumb(src='/art/newAmericanLandscape/thumbs/image#{i}.jpg')

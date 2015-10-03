@@ -48,7 +48,7 @@ gulp.task('sass', ['clean'], function() {
 	return gulp.src(dirs.src + '/sass/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass.sync({
-			outputStyle: 'compressed',
+			outputStyle: 'compact',
 		}).on('error', sass.logError))
 		.pipe(autoprefixer({
 			cascade: false
