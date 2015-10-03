@@ -90,7 +90,7 @@
 
 #wrapper.toggled #page-content-wrapper {
 	position: absolute;
-	margin-right: -$sidebar-width;
+	margin-right: -($sidebar-width - $base-padding);
 }
 
 /* Sidebar Styles */
@@ -158,6 +158,7 @@
 
 	#page-content-wrapper {
 		padding: $base-padding;
+		padding-left: 0px;
 		position: relative;
 	}
 

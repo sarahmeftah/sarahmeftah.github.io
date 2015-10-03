@@ -12,7 +12,10 @@ a:focus {
 }
 
 .page-info {
-	position: absolute;
+	display: block;
+	padding-bottom: $base-padding;
+	width: 100%;
+	max-width: 700px;
 	
 	p {
 		font-size: $base-fontSize;
@@ -27,5 +30,16 @@ a:focus {
 .page-content {
 	display: block;
 	white-space: nowrap;
-	margin-top: 100px;
+}
+
+.art-thumb {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	padding-right: $base-padding;
+}
+
+.art-cover {
+	width: inherit;
+	height: auto;
 }

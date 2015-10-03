@@ -12,7 +12,7 @@ Main
  */
 
 (function() {
-  var pContent, pInfo, sideBar;
+  var pContent, pInfo, sideBar, win;
 
   pInfo = $('.page-info');
 
@@ -20,13 +20,21 @@ Main
 
   sideBar = $('#wrapper');
 
+  win = $(window);
+
   $('#topbar-wrapper button').click(function(ev) {
     ev.preventDefault();
     return sideBar.toggleClass('toggled');
   });
 
-  $(window).scroll(function() {
-    return pInfo.css('left', $(this).scrollLeft());
+  win.scroll(function() {
+    return pInfo.css('margin-left', $(this).scrollLeft());
+  });
+
+  win.resize(function() {
+    if (win.width() > 1024) {
+      return sideBar.removeClass('toggled');
+    }
   });
 
   $(document).load(function() {});

@@ -7,11 +7,35 @@ block vars
 
 
 block content
-	h1 Year 2000
-	p Year 2000 is an exploration in photographic image-making. This project was drawn from research in the tableaux vivant throughout art history and cinema. These carefully arranged landscapes capture the banality of the recent past. From subtle staging to costuming the figures, these images capture a sense of heightened realism through everyday gestures.
+	.page-info
+		h1 Year 2000
+		p Year 2000 is an exploration in photographic image-making. This project was drawn from research in the tableaux vivant throughout art history and cinema. These carefully arranged landscapes capture the banality of the recent past. From subtle staging to costuming the figures, these images capture a sense of heightened realism through everyday gestures.
 	
-	- var i = 0
-	while i < 7
-		- i += 1
+	.page-content
 	
-		img.art-thumb(src='/art/year2000/thumbs/image#{i}.jpg')
+
+block localJS
+	script.
+		var medImgs = [
+			{	id: 1,	width: '640px',	height: '427px'	},
+			{	id: 2,	width: '640px',	height: '397px'	},
+			{	id: 3,	width: '640px',	height: '421px'	},
+			{	id: 4,	width: '640px',	height: '427px'	},
+			{	id: 5,	width: '640px',	height: '424px'	},
+			{	id: 6,	width: '640px',	height: '427px'	},
+			{	id: 7,	width: '640px',	height: '427px'	},
+			{	id: 8,	width: '640px',	height: '421px'	},
+			{	id: 9,	width: '640px',	height: '427px'	},
+			{	id: 10,	width: '640px',	height: '427px'	},
+			{	id: 11,	width: '640px',	height: '427px'	},
+			{	id: 12,	width: '640px',	height: '423px'	},
+			{	id: 13,	width: '640px',	height: '426px'	}
+			
+		];
+				
+		content = $('.page-content');
+		
+		$.each(medImgs, function(index, img) {
+			content.append('<div class="art-thumb"><img src="/art/year2000/y2000-'+img.id+'-md.jpg" width="'+img.width+'" height="'+img.height+'"></div>');
+		});
+		

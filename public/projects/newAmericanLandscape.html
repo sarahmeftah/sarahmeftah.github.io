@@ -25,12 +25,31 @@
           <h1>New American Landscape</h1>
           <p>New American Landscape is a survey of contemporary physical, social, and cultural environments. It documents diverse landscapes and the individuals that exist in those spaces. These images document realism through fragmented, tableau-like cinematic images that inhabit the gap between the simulated and real space.</p>
         </div>
-        <div class="page-content"><img src="/art/newAmericanLandscape/thumbs/image9.jpg" class="art-thumb"><img src="/art/newAmericanLandscape/thumbs/image8.jpg" class="art-thumb"><img src="/art/newAmericanLandscape/thumbs/image7.jpg" class="art-thumb"><img src="/art/newAmericanLandscape/thumbs/image6.jpg" class="art-thumb"><img src="/art/newAmericanLandscape/thumbs/image5.jpg" class="art-thumb"><img src="/art/newAmericanLandscape/thumbs/image4.jpg" class="art-thumb"><img src="/art/newAmericanLandscape/thumbs/image3.jpg" class="art-thumb"><img src="/art/newAmericanLandscape/thumbs/image2.jpg" class="art-thumb"><img src="/art/newAmericanLandscape/thumbs/image1.jpg" class="art-thumb">
-        </div>
+        <div class="page-content"></div>
       </div>
     </div>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
+    <script>
+      var medImgs = [
+      	{	id: 6,	width: '640px',	height: '467px'	},
+      	{	id: 5,	width: '640px',	height: '474px'	},
+      	{	id: 4,	width: '640px',	height: '457px'	},
+      	{	id: 3,	width: '640px',	height: '474px'	},
+      	{	id: 2,	width: '640px',	height: '468px'	},
+      	{	id: 1,	width: '640px',	height: '474px'	},
+      	
+      	{	id: 7,	width: '640px',	height: '418px'	},
+      	{	id: 8,	width: '640px',	height: '427px'	},
+      	{	id: 9,	width: '640px',	height: '427px'	}
+      ];
+      		
+      content = $('.page-content');
+      
+      $.each(medImgs, function(index, img) {
+      	content.append('<div class="art-thumb"><img src="/art/newAmericanLandscape/nal-'+img.id+'-md.jpg" width="'+img.width+'" height="'+img.height+'"></div>');
+      });
+    </script>
   </body>
 </html>
