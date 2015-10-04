@@ -25,7 +25,7 @@ var banner =
 	' */\n\n';
 
 var dirs = {
-	pub: __dirname + '/public',
+	pub: __dirname + '/',
 	src: __dirname + '/src'
 };
 
