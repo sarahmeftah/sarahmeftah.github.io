@@ -1,37 +1,37 @@
 extend ../_layout
 block vars
-	- title = 'New American Landscape'
+    - title = 'New American Landscape'
 
 //- block localCSS
 //- block localJS
 
 
 block content
-	.page-info
-		h1 New American Landscape
-		p New American Landscape is a survey of contemporary physical, social, and cultural environments. It documents diverse landscapes and the individuals that exist in those spaces. These images document realism through fragmented, tableau-like cinematic images that inhabit the gap between the simulated and real space.
-	
-	.page-content
-			
+    .page-info
+        h1 New American Landscape
+        p New American Landscape is a survey of contemporary physical, social, and cultural environments. It documents diverse landscapes and the individuals that exist in those spaces. These images document realism through fragmented, tableau-like cinematic images that inhabit the gap between the simulated and real space.
+    
+    .page-content
+            
 
 block localJS
-	script.
-		var medImgs = [
-			{	id: 6,	width: '640px',	height: '467px'	},
-			{	id: 5,	width: '640px',	height: '474px'	},
-			{	id: 4,	width: '640px',	height: '457px'	},
-			{	id: 3,	width: '640px',	height: '474px'	},
-			{	id: 2,	width: '640px',	height: '468px'	},
-			{	id: 1,	width: '640px',	height: '474px'	},
-			
-			{	id: 7,	width: '640px',	height: '418px'	},
-			{	id: 8,	width: '640px',	height: '427px'	},
-			{	id: 9,	width: '640px',	height: '427px'	}
-		];
-				
-		content = $('.page-content');
-		
-		$.each(medImgs, function(index, img) {
-			content.append('<div class="art-thumb"><img src="/art/newAmericanLandscape/nal-'+img.id+'-md.jpg" width="'+img.width+'" height="'+img.height+'"></div>');
-		});
-		
+    script.
+        var medImgs = [
+            {    id: 6,    width: '640px',    height: '467px'    },
+            {    id: 5,    width: '640px',    height: '474px'    },
+            {    id: 4,    width: '640px',    height: '457px'    },
+            {    id: 3,    width: '640px',    height: '474px'    },
+            {    id: 2,    width: '640px',    height: '468px'    },
+            {    id: 1,    width: '640px',    height: '474px'    },
+            
+            {    id: 7,    width: '640px',    height: '418px'    },
+            {    id: 8,    width: '640px',    height: '427px'    },
+            {    id: 9,    width: '640px',    height: '427px'    }
+        ];
+        
+        content = $('.page-content');
+        
+        $.each(medImgs, function(index, img) {
+            content.append('<div class="art-thumb"><img src="/res/img/art/newAmericanLandscape/nal-'+img.id+'-md.jpg" width="'+img.width+'" height="'+img.height+'"></div>');
+        });
+        

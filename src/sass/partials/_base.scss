@@ -1,45 +1,45 @@
 body, html {
-	width: 100%;
-	height: 100%;
-	background-color: $base-background;
+    width: 100%;
+    height: 100%;
+    background-color: $base-background;
 }
 
 a,
 a:hover,
 a:active,
 a:focus {
-	text-decoration: none;
+    text-decoration: none;
 }
 
 .page-info {
-	display: block;
-	padding-bottom: $base-padding;
-	width: 100%;
-	max-width: 700px;
-	
-	p {
-		font-size: $base-fontSize;
-		max-width: $base-art-maxThumbWidth;
-	}
+    display: block;
+    padding-bottom: $base-padding;
+    width: 100%;
+    max-width: 700px;
 
-	h1 {
-		font-size: $base-fontSize-header;
-	}
+    p {
+        font-size: $base-fontSize;
+        max-width: $base-art-maxThumbWidth;
+    }
+
+    h1 {
+        font-size: $base-fontSize-header;
+    }
 }
 
 .page-content {
-	display: block;
-	white-space: nowrap;
+    display: block;
+    white-space: nowrap;
 }
 
 .art-thumb {
-	display: inline-block;
-	width: auto;
-	height: auto;
-	padding-right: $base-padding;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding-right: $base-padding;
 }
 
 .art-cover {
-	width: inherit;
-	height: auto;
+    width: inherit;
+    height: auto;
 }

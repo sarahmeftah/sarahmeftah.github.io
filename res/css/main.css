@@ -14,7 +14,7 @@
 
 #topbar-wrapper button { display: block; position: absolute; right: 20px; top: 11px; padding: 5px 10px; font-size: 18px; background-color: #e5e5e5; }
 
-#topbar-wrapper button:hover { background-color: #d8d8d8; }
+#topbar-wrapper button:hover { background-color: #d9d9d9; }
 
 #sidebar-wrapper { z-index: 1000; position: fixed; left: 220px; width: 0; height: 100%; margin-left: -220px; overflow-y: auto; background: #F2F2F2; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
 
