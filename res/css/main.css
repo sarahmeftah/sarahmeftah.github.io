@@ -61,6 +61,8 @@ a, a:hover, a:active, a:focus { text-decoration: none; }
 
 .art-thumb { display: inline-block; width: auto; height: auto; padding-right: 20px; }
 
-.art-cover { width: inherit; height: auto; }
+.art-cover-container { position: relative; width: 100%; height: 100%; overflow-x: hidden; }
+
+.art-cover { position: absolute; width: inherit; height: auto; left: 0; top: 0; }
 
 /*# sourceMappingURL=main.css.map */

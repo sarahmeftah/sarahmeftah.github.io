@@ -2,9 +2,52 @@ extend _layout
 block vars
     - title = 'Home'
 
-//- block localCSS
-//- block localJS
-
 
 block content
-    img.art-cover(src='/res/img/cover.jpg')
+    div.art-cover-container
+        img.art-cover(src='/res/img/covers/california-2.jpg')
+
+block localJS
+    script.
+        var FADE_TIME = 1000;
+        var CHANGE_TIME = 10000;
+        var coverContainer = $('.art-cover-container');
+        var covers = [
+            'california-2',
+            'favbm-red-lot',
+            'y2000-2',
+            'nal-6',
+            'favbm-bamboo-house'
+        ];
+        
+        var i = 1;
+        function changePic(num) {
+            var oldPic = $('.art-cover');
+            var newPic = $('<img class="art-cover" src="/res/img/covers/'+covers[num]+'.jpg"/>');
+            
+            newPic.width(coverContainer.width());
+            newPic.css('opacity', 0);
+            oldPic.after(newPic);
+            
+            newPic.fadeTo(FADE_TIME, 1);
+            oldPic.fadeTo(FADE_TIME, 0, function() {
+                oldPic.remove();
+            });
+            
+            if (i === covers.length) {
+                i = 0;
+            }
+        }
+        
+        function fixWidth() {
+            $('.art-cover').width(coverContainer.width());
+        }
+        
+        fixWidth();
+        $(window).resize(function() {
+            fixWidth();
+        });
+        
+        setInterval(function() {
+            changePic(i++);
+        }, CHANGE_TIME);

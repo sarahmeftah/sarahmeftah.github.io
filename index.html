@@ -41,10 +41,56 @@
           <li><a href="/info/contact.html">Contact</a></li>
         </ul>
       </div>
-      <div id="page-content-wrapper" class="container-fluid"><img src="/res/img/cover.jpg" class="art-cover"></div>
+      <div id="page-content-wrapper" class="container-fluid">
+        <div class="art-cover-container"><img src="/res/img/covers/california-2.jpg" class="art-cover"></div>
+      </div>
     </div>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/res/js/main.min.js"></script>
+    <script>
+      var FADE_TIME = 1000;
+      var CHANGE_TIME = 10000;
+      var coverContainer = $('.art-cover-container');
+      var covers = [
+          'california-2',
+          'favbm-red-lot',
+          'y2000-2',
+          'nal-6',
+          'favbm-bamboo-house'
+      ];
+      
+      var i = 1;
+      function changePic(num) {
+          var oldPic = $('.art-cover');
+          var newPic = $('<img class="art-cover" src="/res/img/covers/'+covers[num]+'.jpg"/>');
+          
+          newPic.width(coverContainer.width());
+          newPic.css('opacity', 0);
+          oldPic.after(newPic);
+          
+          newPic.fadeTo(FADE_TIME, 1);
+          oldPic.fadeTo(FADE_TIME, 0, function() {
+              oldPic.remove();
+          });
+          
+          if (i === covers.length) {
+              i = 0;
+          }
+      }
+      
+      function fixWidth() {
+          $('.art-cover').width(coverContainer.width());
+      }
+      
+      fixWidth();
+      $(window).resize(function() {
+          fixWidth();
+      });
+      
+      setInterval(function() {
+          changePic(i++);
+      }, CHANGE_TIME);
+    </script>
   </body>
 </html>
