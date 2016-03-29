@@ -21,7 +21,7 @@
     <meta property="og:title" content="Sarah Meftah">
     <meta property="og:image" content="http://sarahmeftah.github.com/res/img/linkPreview.jpg">
     <meta property="og:url" content="http://sarahmeftah.com">
-    <title>Sarah Meftah - Bio</title>
+    <title>Sarah Meftah - For a Very Brief Moment</title>
     <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet" href="/res/css/main.css">
   </head>
@@ -43,14 +43,39 @@
       </div>
       <div id="page-content-wrapper" class="container-fluid">
         <div class="page-info">
-          <h1>Bio</h1>
-          <p>b. 1993 Gainesville, Florida</p>
-          <p>Sarah Meftah is a visual artist currently living in San Francisco, CA. In addition, she contributes as a Department Assistant for Academy of Art University. Her current works explore image-making and social documentation. Her individual projects have been exhibited and published at Florida State University’s MOFA and Phyllis Straus Gallery.</p>
+          <h1>For a Very Brief Moment</h1>
+          <p>This body of work is a series of photographs that explore commonplace moments at a heightened gaze. They are social documentary-based works that address questions of perception, observation, and truth in photography. Given their cinematic characteristics, images could be read as open ended visual shorts. As a collection, <i>For a Very Brief Moment</i> is pure documentation of reality and it's everyday strangeness.</p>
+          <p><i>For a Very Brief Moment</i> will be available to purchase as a booklet via St. Sebastian Press in May 2016.</p>
         </div>
+        <div class="page-content"></div>
       </div>
     </div>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/res/js/main.min.js"></script>
+    <script>
+      var medImgs = [
+          {id: 'bamboo-house',                    width: 640, height: 459},
+          {id: 'red-lot',                         width: 640, height: 455},
+          {id: 'hotel-room-with-a-view',          width: 640, height: 459},
+          {id: 'woman-with-bag',                  width: 640, height: 459},
+          {id: 'house-on-beard-street',           width: 640, height: 459},
+          {id: 'leon-high-school',                width: 640, height: 459},
+          {id: 'man-with-bag',                    width: 640, height: 459},
+          {id: 'prince-murat-motel',              width: 640, height: 459},
+          {id: 'stars-meat-market-no-1',          width: 640, height: 459},
+          {id: 'stars-meat-market-no-2',          width: 640, height: 459},
+          {id: 'parking-garage',                  width: 640, height: 459},
+          {id: 'post-office',                     width: 640, height: 459},
+          {id: 'lamp-and-shade',                  width: 640, height: 459},
+          {id: 'house-on-the-corner',             width: 640, height: 459}
+      ];
+      
+      var content = $('.page-content');
+      
+      $.each(medImgs, function(index, img) {
+          content.append('<div class="art-thumb"><img src="/res/img/art/favbm/md/'+img.id+'.jpg" width="'+img.width+'px" height="'+img.height+'px"></div>');
+      });
+    </script>
   </body>
 </html>

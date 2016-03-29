@@ -33,6 +33,7 @@
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
           <li class="divider"><span>Projects</span></li>
+          <li><a href="/projects/favbm.html">For a Very Brief Moment</a></li>
           <li><a href="/projects/newAmericanLandscape.html">New American Landscape</a></li>
           <li><a href="/projects/year2000.html">Year 2000</a></li>
           <li class="divider"><span>Info</span></li>
@@ -63,7 +64,7 @@
           {    id: 12,    width: '640px',    height: '423px'    },
       ];
       
-      content = $('.page-content');
+      var content = $('.page-content');
       
       $.each(medImgs, function(index, img) {
           content.append('<div class="art-thumb"><img src="/res/img/art/year2000/y2000-'+img.id+'-md.jpg" width="'+img.width+'" height="'+img.height+'"></div>');

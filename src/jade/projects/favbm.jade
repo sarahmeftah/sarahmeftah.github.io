@@ -1,0 +1,39 @@
+extend ../_layout
+block vars
+    - title = 'For a Very Brief Moment'
+
+
+block content
+    .page-info
+        h1 For a Very Brief Moment
+        p This body of work is a series of photographs that explore commonplace moments at a heightened gaze. They are social documentary-based works that address questions of perception, observation, and truth in photography. Given their cinematic characteristics, images could be read as open ended visual shorts. As a collection, <i>For a Very Brief Moment</i> is pure documentation of reality and it's everyday strangeness.
+        p <i>For a Very Brief Moment</i> will be available to purchase as a booklet via St. Sebastian Press in May 2016.
+    
+    .page-content
+            
+
+block localJS
+    script.
+        var medImgs = [
+            {id: 'bamboo-house',                    width: 640, height: 459},
+            {id: 'red-lot',                         width: 640, height: 455},
+            {id: 'hotel-room-with-a-view',          width: 640, height: 459},
+            {id: 'woman-with-bag',                  width: 640, height: 459},
+            {id: 'house-on-beard-street',           width: 640, height: 459},
+            {id: 'leon-high-school',                width: 640, height: 459},
+            {id: 'man-with-bag',                    width: 640, height: 459},
+            {id: 'prince-murat-motel',              width: 640, height: 459},
+            {id: 'stars-meat-market-no-1',          width: 640, height: 459},
+            {id: 'stars-meat-market-no-2',          width: 640, height: 459},
+            {id: 'parking-garage',                  width: 640, height: 459},
+            {id: 'post-office',                     width: 640, height: 459},
+            {id: 'lamp-and-shade',                  width: 640, height: 459},
+            {id: 'house-on-the-corner',             width: 640, height: 459}
+        ];
+        
+        var content = $('.page-content');
+        
+        $.each(medImgs, function(index, img) {
+            content.append('<div class="art-thumb"><img src="/res/img/art/favbm/md/'+img.id+'.jpg" width="'+img.width+'px" height="'+img.height+'px"></div>');
+        });
+        

@@ -26,7 +26,7 @@ block localJS
             {    id: 9,    width: '640px',    height: '427px'    }
         ];
         
-        content = $('.page-content');
+        var content = $('.page-content');
         
         $.each(medImgs, function(index, img) {
             content.append('<div class="art-thumb"><img src="/res/img/art/newAmericanLandscape/nal-'+img.id+'-md.jpg" width="'+img.width+'" height="'+img.height+'"></div>');
