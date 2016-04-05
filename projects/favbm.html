@@ -55,26 +55,26 @@
     <script src="/res/js/main.min.js"></script>
     <script>
       var medImgs = [
-          {id: 'bamboo-house',                    width: 640, height: 459},
-          {id: 'red-lot',                         width: 640, height: 455},
-          {id: 'hotel-room-with-a-view',          width: 640, height: 459},
-          {id: 'woman-with-bag',                  width: 640, height: 459},
-          {id: 'house-on-beard-street',           width: 640, height: 459},
-          {id: 'leon-high-school',                width: 640, height: 459},
-          {id: 'man-with-bag',                    width: 640, height: 459},
-          {id: 'prince-murat-motel',              width: 640, height: 459},
-          {id: 'stars-meat-market-no-1',          width: 640, height: 459},
-          {id: 'stars-meat-market-no-2',          width: 640, height: 459},
-          {id: 'parking-garage',                  width: 640, height: 459},
-          {id: 'post-office',                     width: 640, height: 459},
-          {id: 'lamp-and-shade',                  width: 640, height: 459},
-          {id: 'house-on-the-corner',             width: 640, height: 459}
+          'bamboo-house',
+          'red-lot',
+          'hotel-room-with-a-view',
+          'woman-with-bag',
+          'house-on-beard-street',
+          'leon-high-school',
+          'man-with-bag',
+          'prince-murat-motel',
+          'stars-meat-market-no-1',
+          'stars-meat-market-no-2',
+          'parking-garage',
+          'post-office',
+          'lamp-and-shade',
+          'house-on-the-corner'
       ];
       
       var content = $('.page-content');
       
       $.each(medImgs, function(index, img) {
-          content.append('<div class="art-thumb"><img src="/res/img/art/favbm/md/'+img.id+'.jpg" width="'+img.width+'px" height="'+img.height+'px"></div>');
+          content.append('<div class="art-thumb"><img src="/res/img/art/favbm/lg/'+img+'.jpg" width="auto" height="px"></div>');
       });
     </script>
   </body>

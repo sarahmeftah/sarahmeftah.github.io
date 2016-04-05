@@ -53,21 +53,12 @@
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/res/js/main.min.js"></script>
     <script>
-      var medImgs = [
-          {    id: 1,    width: '640px',    height: '427px'    },
-          {    id: 3,    width: '640px',    height: '421px'    },
-          {    id: 5,    width: '640px',    height: '424px'    },
-          {    id: 7,    width: '640px',    height: '427px'    },
-          {    id: 8,    width: '640px',    height: '421px'    },
-          {    id: 10,    width: '640px',    height: '427px'    },
-          {    id: 11,    width: '640px',    height: '427px'    },
-          {    id: 12,    width: '640px',    height: '423px'    },
-      ];
+      var medImgs = [1, 2, 3, 4, 5, 6, 7, 8];
       
       var content = $('.page-content');
       
       $.each(medImgs, function(index, img) {
-          content.append('<div class="art-thumb"><img src="/res/img/art/year2000/y2000-'+img.id+'-md.jpg" width="'+img.width+'" height="'+img.height+'"></div>');
+          content.append('<div class="art-thumb"><img src="/res/img/art/year2000/lg/y2000-'+img+'.jpg" width="auto" height="700px"></div>');
       });
     </script>
   </body>
