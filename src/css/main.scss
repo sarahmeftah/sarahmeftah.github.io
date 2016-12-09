@@ -16,5 +16,5 @@ $topbar-height: 60px;
 $sidebar-width: 220px;
 
 
-@import 'vender/startbootstrap-simple-sidebar';
-@import 'partials/base';
+@import '_vender/startbootstrap-simple-sidebar';
+@import '_partials/base';

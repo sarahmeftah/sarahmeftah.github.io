@@ -1,5 +1,7 @@
 node_modules
-image*.jpg
-*-lg.jpg
-originals
-*.mov
+bower_components
+/build
+/.publish
+
+# Should link to Google drive folder
+/cloud

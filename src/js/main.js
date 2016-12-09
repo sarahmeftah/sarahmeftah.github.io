@@ -2,7 +2,7 @@
  * Main
  */
 
-(function() {
+(function($) {
     'use strict';
 
     var pInfo = $('.page-info');
@@ -23,4 +23,4 @@
             sideBar.removeClass('toggled');
         }
     });
-})();
+})(jQuery);
