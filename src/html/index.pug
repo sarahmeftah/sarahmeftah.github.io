@@ -5,8 +5,8 @@ block vars
 
 
 block content
-    div.art-cover-container
-        img.art-cover(src='/res/img/covers/california-2.jpg')
+    .art-cover-container
+        img.art-cover(src="/img/covers/california/california_2.jpg" width="100%" height="auto")
 
 block localJS
     script.
@@ -14,20 +14,20 @@ block localJS
         var CHANGE_TIME = 10000;
         var coverContainer = $('.art-cover-container');
         var covers = [
-            'california-2',
-            'favbm-red-lot',
-            'y2000-2',
-            'nal-6',
-            'favbm-bamboo-house'
+            'california/california_2',
+            'for_a_very_brief_moment/red-lot',
+            'year_2000/year_2000_2',
+            'new_american_landscape/new_american_landscape_6',
+            'for_a_very_brief_moment/bamboo-house'
         ];
         
         var i = 1;
         function changePic(num) {
             var oldPic = $('.art-cover');
-            var newPic = $('<img class="art-cover" src="/res/img/covers/'+covers[num]+'.jpg"/>');
+            var newPic = $('<img class="art-cover" src="/img/covers/'+covers[num]+'.jpg" width="100%" height="auto"/>');
             
-            newPic.width(coverContainer.width());
             newPic.css('opacity', 0);
+            oldPic.addClass('art-cover-old');
             oldPic.after(newPic);
             
             newPic.fadeTo(FADE_TIME, 1);
@@ -40,14 +40,6 @@ block localJS
             }
         }
         
-        function fixWidth() {
-            $('.art-cover').width(coverContainer.width());
-        }
-        
-        fixWidth();
-        $(window).resize(function() {
-            fixWidth();
-        });
         
         setInterval(function() {
             changePic(i++);

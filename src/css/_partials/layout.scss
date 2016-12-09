@@ -4,6 +4,23 @@ body, html {
     background-color: $base-background;
 }
 
+#page-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh;
+
+    .content {
+        white-space: normal;
+        flex-grow: 1;
+    }
+
+    .footer {
+        margin-top: 2em;
+    }
+}
+
+
+
 .page-info {
     display: block;
     padding-bottom: $base-padding;

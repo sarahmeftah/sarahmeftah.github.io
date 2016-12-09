@@ -5,7 +5,7 @@
 (function($) {
     'use strict';
 
-    var pInfo = $('.page-info');
+    var pInfo = $('.content-fixed');
     var pContent = $('.page-content');
     var sideBar = $('#wrapper');
     var win = $(window);
