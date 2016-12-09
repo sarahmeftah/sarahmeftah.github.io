@@ -5,3 +5,5 @@ bower_components
 
 # Should link to Google drive folder
 /cloud
+
+npm-debug*.log
