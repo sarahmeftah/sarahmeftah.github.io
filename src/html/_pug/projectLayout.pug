@@ -1,1 +1,12 @@
 extends ./mainLayout.pug
+
+block content
+    .page-info
+        block content-page-info
+    .page-content
+        if project
+            for img in project.images
+                .art-thumb
+                    img(src=`/img/thumbs/projects/${project.imageRootSrc}/${img.src}` height='700px' width='auto')
+        else
+            h1 Error! Missing project data object
