@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Sarah Meftah">
+    <meta property="og:image" content="http://sarahmeftah.com/img/link_preview.jpg">
+    <meta property="og:url" content="http://sarahmeftah.com">
+    <title>Sarah Meftah - Home</title>
+    <link type="text/css" rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="topbar-wrapper"><span class="topbar-brand"><a href="/index.html">Sarah Meftah</a></span>
+        <button class="btn" type="button" aria-label="Menu"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></button>
+      </div>
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="divider"><span>Projects</span></li>
+          <li><a href="/projects/for_a_very_brief_moment.html">For a Very Brief Moment</a></li>
+          <li><a href="/projects/new_american_landscape.html">New American Landscape</a></li>
+          <li><a href="/projects/year_2000.html">Year 2000</a></li>
+          <li class="divider"><span>Info</span></li>
+          <li><a href="/info/bio.html">Bio</a></li>
+          <li><a href="/info/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="container-fluid" id="page-content-wrapper">
+        <div class="content">
+          <div class="art-cover-container"><img class="art-cover" src="/img/covers/california/california_2.jpg" width="100%" height="auto"></div>
+        </div>
+        <div class="footer content-fixed">
+          <p class="copyright">&copy; 2016 Sarah Meftah</p>
+        </div>
+      </div>
+    </div>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/main.min.js"></script>
+    <script>
+      var FADE_TIME = 1000;
+      var CHANGE_TIME = 10000;
+      var coverContainer = $('.art-cover-container');
+      var covers = [
+          'california/california_2',
+          'for_a_very_brief_moment/red-lot',
+          'year_2000/year_2000_2',
+          'new_american_landscape/new_american_landscape_6',
+          'for_a_very_brief_moment/bamboo-house'
+      ];
+      
+      var i = 1;
+      function changePic(num) {
+          var oldPic = $('.art-cover');
+          var newPic = $('<img class="art-cover" src="/img/covers/'+covers[num]+'.jpg" width="100%" height="auto"/>');
+          
+          newPic.css('opacity', 0);
+          oldPic.addClass('art-cover-old');
+          oldPic.after(newPic);
+          
+          newPic.fadeTo(FADE_TIME, 1);
+          oldPic.fadeTo(FADE_TIME, 0, function() {
+              oldPic.remove();
+          });
+          
+          if (i === covers.length) {
+              i = 0;
+          }
+      }
+      
+      
+      setInterval(function() {
+          changePic(i++);
+      }, CHANGE_TIME);
+    </script>
+  </body>
+</html>

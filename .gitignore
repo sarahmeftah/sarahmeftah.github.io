@@ -1,9 +1,0 @@
-node_modules
-bower_components
-/build
-/.publish
-
-# Should link to Google drive folder
-/cloud
-
-npm-debug*.log
