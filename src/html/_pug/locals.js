@@ -17,6 +17,21 @@ locals.getTitle = function(subtitle) {
 
 // Order defined is the same as nav order
 locals.projects = {
+    'basketball_courts': {
+        title: 'Basketball Courts',
+        imageRootSrc: 'basketball_courts',
+        href: '/projects/basketball_courts.html',
+        images: [
+            { src: 'image1.jpg' },
+            { src: 'image2.jpg' },
+            { src: 'image3.jpg' },
+            { src: 'image4.jpg' },
+            { src: 'image5.jpg' },
+            { src: 'image6.jpg' },
+            { src: 'image7.jpg' }
+        ]
+    },
+
     'for_a_very_brief_moment': {
         title: 'For a Very Brief Moment',
         imageRootSrc: 'for_a_very_brief_moment',
