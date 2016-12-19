@@ -1,0 +1,8 @@
+extends ../_pug/mainLayout.pug
+
+block vars
+    - title = 'CV'
+
+block content
+    .page-info
+        include:markdown ./cv.md
