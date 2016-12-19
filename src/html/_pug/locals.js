@@ -23,14 +23,14 @@ locals.projects = {
             { src: 'bamboo-house.jpg' },
             { src: 'red-lot.jpg' },
             { src: 'hotel-room-with-a-view.jpg' },
-            { src: 'woman-with-bag.jpg' },
+            // { src: 'woman-with-bag.jpg' },
             { src: 'house-on-beard-street.jpg' },
-            { src: 'leon-high-school.jpg' },
-            { src: 'man-with-bag.jpg' },
+            // { src: 'leon-high-school.jpg' },
+            // { src: 'man-with-bag.jpg' },
             { src: 'prince-murat-motel.jpg' },
             { src: 'stars-meat-market-no-1.jpg' },
-            { src: 'stars-meat-market-no-2.jpg' },
-            { src: 'parking-garage.jpg' },
+            // { src: 'stars-meat-market-no-2.jpg' },
+            // { src: 'parking-garage.jpg' },
             { src: 'post-office.jpg' },
             { src: 'lamp-and-shade.jpg' },
             { src: 'house-on-the-corner.jpg' }
@@ -62,9 +62,9 @@ locals.projects = {
             { src: 'year_2000_3.jpg' },
             { src: 'year_2000_4.jpg' },
             { src: 'year_2000_5.jpg' },
-            { src: 'year_2000_6.jpg' },
+            // { src: 'year_2000_6.jpg' },
             { src: 'year_2000_7.jpg' },
-            { src: 'year_2000_8.jpg' }
+            // { src: 'year_2000_8.jpg' }
         ]
     }
 };
