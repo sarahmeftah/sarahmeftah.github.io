@@ -116,8 +116,8 @@ gulp.task('img:thumbs', function() {
             path.basename = path.basename.replace(/\s/g, '_').toLowerCase();
         }))
         .pipe(imageResize({
-            width: 500,
-            height: 1000,
+            width: 2000,
+            height: 700,
             crop: false,
             upscale: false,
             quality: 1,
