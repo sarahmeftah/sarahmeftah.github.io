@@ -31,5 +31,9 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
     "morgan": "^1.7.0"
+  },
+  "dependencies": {
+    "jstransformer": "^1.0.0",
+    "jstransformer-markdown-it": "^2.0.0"
   }
 }

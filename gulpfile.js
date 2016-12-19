@@ -54,6 +54,7 @@ gulp.task('css', function() {
  */
 gulp.task('html', function() {
     var pug = require('gulp-pug');
+    var md = require('jstransformer')(require('jstransformer-markdown-it'));
 
     return gulp.src([
         dirs.src + '/html/**/*.pug',
@@ -62,10 +63,16 @@ gulp.task('html', function() {
     ])
         .pipe(pug({
             pretty: true,
-            locals: require(dirs.src + '/html/locals.js')
+            locals: require(dirs.src + '/html/_pug/locals.js'),
+            filters: {
+                'markdown': function(str) {
+                    return md.render(str).body;
+                }
+            }
         }))
         .pipe(gulp.dest(dirs.build));
 });
+
 
 
 /**
