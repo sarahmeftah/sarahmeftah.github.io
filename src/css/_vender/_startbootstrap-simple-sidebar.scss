@@ -106,6 +106,10 @@
         text-indent: $base-padding;
         line-height: 20px;
 
+        &.active {
+            font-style: italic;
+        }
+
         a {
             display: block;
             text-decoration: none;
@@ -121,7 +125,6 @@
                 text-decoration: none;
             }
         }
-
     }
 
     > .divider {

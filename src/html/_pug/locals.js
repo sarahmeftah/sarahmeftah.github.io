@@ -15,10 +15,12 @@ locals.getTitle = function(subtitle) {
 };
 
 
+// Order defined is the same as nav order
 locals.projects = {
     'for_a_very_brief_moment': {
         title: 'For a Very Brief Moment',
         imageRootSrc: 'for_a_very_brief_moment',
+        href: '/projects/for_a_very_brief_moment.html',
         images: [
             { src: 'bamboo-house.jpg' },
             { src: 'red-lot.jpg' },
@@ -40,6 +42,7 @@ locals.projects = {
     'new_american_landscape': {
         title: 'New American Landscape',
         imageRootSrc: 'new_american_landscape',
+        href: '/projects/new_american_landscape.html',
         images: [
             { src: 'new_american_landscape_9.jpg' },
             { src: 'new_american_landscape_8.jpg' },
@@ -56,6 +59,7 @@ locals.projects = {
     'year_2000': {
         title: 'Year 2000',
         imageRootSrc: 'year_2000',
+        href: '/projects/year_2000.html',
         images: [
             { src: 'year_2000_1.jpg' },
             { src: 'year_2000_2.jpg' },
@@ -68,6 +72,13 @@ locals.projects = {
         ]
     }
 };
+
+
+locals.infos = [
+    { title: 'Bio', href: '/info/bio.html' },
+    { title: 'CV', href: '/info/cv.html' },
+    { title: 'Contact', href: '/info/contact.html' }
+];
 
 
 module.exports = locals;

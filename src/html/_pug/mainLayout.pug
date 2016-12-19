@@ -49,14 +49,12 @@ html
             #sidebar-wrapper
                 ul.sidebar-nav
                     li.divider: span Projects
-                    li: a(href='/projects/for_a_very_brief_moment.html') For a Very Brief Moment
-                    li: a(href='/projects/new_american_landscape.html') New American Landscape
-                    li: a(href='/projects/year_2000.html') Year 2000
+                    each item in projects
+                        li(class=(title===item.title? "active" : "")): a(href=item.href) #{item.title}
 
                     li.divider: span Info
-                    li: a(href='/info/bio.html') Bio
-                    li: a(href='/info/cv.html') CV
-                    li: a(href='/info/contact.html') Contact
+                    each item in infos
+                        li(class=(title===item.title? "active" : "")): a(href=item.href) #{item.title}
 
             #page-content-wrapper.container-fluid
                 .content
