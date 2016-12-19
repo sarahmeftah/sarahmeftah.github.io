@@ -1,9 +1,22 @@
-.art-thumb {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding-right: $base-padding;
+
+.art-horizontal {
+    display: block;
+    white-space: nowrap;
+
+    .art-thumb {
+        display: inline-block;
+        padding-right: $base-padding;
+    }
 }
+.art-vertical {
+    display: block;
+    
+    .art-thumb {
+        display: block;
+        padding-bottom: $base-padding;
+    }
+}
+
 
 .art-cover-container {
     position: relative;
