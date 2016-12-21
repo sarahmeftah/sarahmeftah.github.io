@@ -132,30 +132,6 @@ gulp.task('img:thumbs', function() {
         }))
         .pipe(gulp.dest(dirs.build + '/img/thumbs'));
 });
-gulp.task('img:covers', function() {
-    var rename = require('gulp-rename');
-    var imageResize = require('gulp-image-resize');
-
-    return gulp.src([
-            dirs.cloud + '/img/originals/projects/california/california_2.jpg',
-            dirs.cloud + '/img/originals/projects/for_a_very_brief_moment/bamboo-house.jpg',
-            dirs.cloud + '/img/originals/projects/for_a_very_brief_moment/red-lot.jpg',
-            dirs.cloud + '/img/originals/projects/new_american_landscape/new_american_landscape_6.jpg',
-            dirs.cloud + '/img/originals/projects/year_2000/year_2000_2.jpg'
-        ], { base: dirs.cloud + '/img/originals/projects/' })
-        .pipe(rename(function(path) {
-            path.basename = path.basename.replace(/\s/g, '_').toLowerCase();
-        }))
-        .pipe(imageResize({
-            width: 2000,
-            height: 2000,
-            crop: false,
-            upscale: false,
-            quality: 1,
-            imageMagick: true
-        }))
-        .pipe(gulp.dest(dirs.build + '/img/covers'));
-});
 gulp.task('img:copy', function() {
     var rename = require('gulp-rename');
 
@@ -169,7 +145,7 @@ gulp.task('img:copy', function() {
         .pipe(gulp.dest(dirs.build + '/img'));
 });
 
-gulp.task('img', ['img:copy', 'img:thumbs', 'img:covers']);
+gulp.task('img', ['img:copy', 'img:thumbs']);
 
 
 gulp.task('bower', function() {
