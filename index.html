@@ -34,17 +34,19 @@
       <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
           <li class="divider"><span>Projects</span></li>
+          <li><a href="/projects/basketball_courts.html">Basketball Courts</a></li>
           <li><a href="/projects/for_a_very_brief_moment.html">For a Very Brief Moment</a></li>
           <li><a href="/projects/new_american_landscape.html">New American Landscape</a></li>
           <li><a href="/projects/year_2000.html">Year 2000</a></li>
           <li class="divider"><span>Info</span></li>
           <li><a href="/info/bio.html">Bio</a></li>
+          <li><a href="/info/cv.html">CV</a></li>
           <li><a href="/info/contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="container-fluid" id="page-content-wrapper">
         <div class="content">
-          <div class="art-cover-container"><img class="art-cover" src="/img/covers/california/california_2.jpg" width="100%" height="auto"></div>
+          <div class="art-cover-container"><a href="/projects/basketball_courts.html"><img class="art-cover" src="/img/front_page.jpg" width="100%" height="auto"></a></div>
         </div>
         <div class="footer content-fixed">
           <p class="copyright">&copy; 2016 Sarah Meftah</p>
@@ -54,41 +56,5 @@
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/js/main.min.js"></script>
-    <script>
-      var FADE_TIME = 1000;
-      var CHANGE_TIME = 10000;
-      var coverContainer = $('.art-cover-container');
-      var covers = [
-          'california/california_2',
-          'for_a_very_brief_moment/red-lot',
-          'year_2000/year_2000_2',
-          'new_american_landscape/new_american_landscape_6',
-          'for_a_very_brief_moment/bamboo-house'
-      ];
-      
-      var i = 1;
-      function changePic(num) {
-          var oldPic = $('.art-cover');
-          var newPic = $('<img class="art-cover" src="/img/covers/'+covers[num]+'.jpg" width="100%" height="auto"/>');
-          
-          newPic.css('opacity', 0);
-          oldPic.addClass('art-cover-old');
-          oldPic.after(newPic);
-          
-          newPic.fadeTo(FADE_TIME, 1);
-          oldPic.fadeTo(FADE_TIME, 0, function() {
-              oldPic.remove();
-          });
-          
-          if (i === covers.length) {
-              i = 0;
-          }
-      }
-      
-      
-      setInterval(function() {
-          changePic(i++);
-      }, CHANGE_TIME);
-    </script>
   </body>
 </html>
