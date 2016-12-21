@@ -159,7 +159,10 @@ gulp.task('img:covers', function() {
 gulp.task('img:copy', function() {
     var rename = require('gulp-rename');
 
-    return gulp.src(dirs.cloud + '/img/**/*.jpg')
+    return gulp.src([
+            dirs.cloud + '/img/**/*.jpg',
+            '!' + dirs.cloud + '/img/originals/**/*.jpg'
+        ])
         .pipe(rename(function(path) {
             path.basename = path.basename.replace(/\s/g, '_').toLowerCase();
         }))
