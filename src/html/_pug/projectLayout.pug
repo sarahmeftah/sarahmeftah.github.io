@@ -4,15 +4,17 @@ block content
     .page-info.content-fixed
         block content-page-info
     if project
-        if orientation === 'vertical'
+        if orientation === "vertical"
             .art-vertical
                 for img in project.images
                     .art-thumb
-                        img(src=`/img/thumbs/projects/${project.imageRootSrc}/${img.src}` height='700px' width='auto')
+                        a(href=`/img/originals/projects/${project.imageRootSrc}/${img.src}`)
+                            img(src=`/img/thumbs/projects/${project.imageRootSrc}/${img.src}` height="700px" width="auto")
         else
             .art-horizontal
                 for img in project.images
                     .art-thumb
-                        img(src=`/img/thumbs/projects/${project.imageRootSrc}/${img.src}` height='700px' width='auto')
+                        a(href=`/img/originals/projects/${project.imageRootSrc}/${img.src}`)
+                            img(src=`/img/thumbs/projects/${project.imageRootSrc}/${img.src}` height="700px" width="auto")
     else
         h1 Error! Missing project data object
