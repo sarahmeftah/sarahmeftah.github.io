@@ -9,7 +9,7 @@ block content
                 for img in project.images
                     .art-thumb
                         a(href=`/img/originals/projects/${project.imageRootSrc}/${img.src}`)
-                            img(src=`/img/thumbs/projects/${project.imageRootSrc}/${img.src}` height="700px" width="auto")
+                            img(src=`/img/thumbs/projects/${project.imageRootSrc}/${img.src}` height="auto" width="550px")
         else
             .art-horizontal
                 for img in project.images

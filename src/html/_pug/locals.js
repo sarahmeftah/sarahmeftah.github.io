@@ -83,7 +83,7 @@ locals.projects = {
       { src: 'new_landscapes_6.jpg' },
       { src: 'new_landscapes_5.jpg' },
       { src: 'new_landscapes_4.jpg' },
-      { src: 'new_landscapes_1.jpg' },
+      // { src: 'new_landscapes_1.jpg' },
       { src: 'new_landscapes_2.jpg' },
       { src: 'new_landscapes_3.jpg' }
     ]
