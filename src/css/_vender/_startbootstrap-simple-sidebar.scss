@@ -28,7 +28,7 @@
     height: $topbar-height;
     line-height: $topbar-height;
     width: 100%;
-    pointer-events: none;
+    background-color: $base-background;
 
     > * {
         pointer-events: auto;
