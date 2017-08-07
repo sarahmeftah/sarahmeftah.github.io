@@ -16,6 +16,23 @@ locals.getTitle = function (subtitle) {
 
 // Order defined is the same as nav order
 locals.projects = {
+  'the_sunset': {
+    title: 'The Sunset',
+    imageRootSrc: 'the_sunset',
+    href: '/projects/the_sunset.html',
+    images: [
+      { src: 'image1.jpg' },
+      { src: 'image2.jpg' },
+      { src: 'image3.jpg' },
+      { src: 'image4.jpg' },
+      { src: 'image5.jpg' },
+      { src: 'image6.jpg' },
+      { src: 'image7.jpg' },
+      { src: 'image8.jpg' },
+      { src: 'image9.jpg' }
+    ]
+  },
+
   'basketball_courts': {
     title: 'Basketball Courts',
     imageRootSrc: 'basketball_courts',
@@ -28,14 +45,15 @@ locals.projects = {
       { src: 'image5.jpg' },
       { src: 'image6.jpg' },
       { src: 'image7.jpg' },
-      { src: 'image8.jpg' }
+      { src: 'image8.jpg' },
+      { src: 'image9.jpg' }
     ]
   },
 
-  'for_a_very_brief_moment': {
-    title: 'For a Very Brief Moment',
-    imageRootSrc: 'for_a_very_brief_moment',
-    href: '/projects/for_a_very_brief_moment.html',
+  'nightwatch': {
+    title: 'Nightwatch',
+    imageRootSrc: 'nightwatch',
+    href: '/projects/nightwatch.html',
     images: [
       { src: 'bamboo-house.jpg' },
       { src: 'red-lot.jpg' },
@@ -54,36 +72,20 @@ locals.projects = {
     ]
   },
 
-  'new_american_landscape': {
-    title: 'New American Landscape',
-    imageRootSrc: 'new_american_landscape',
-    href: '/projects/new_american_landscape.html',
+  'new_landscapes': {
+    title: 'New Landscapes',
+    imageRootSrc: 'new_landscapes',
+    href: '/projects/new_landscapes.html',
     images: [
-      { src: 'new_american_landscape_9.jpg' },
-      { src: 'new_american_landscape_8.jpg' },
-      { src: 'new_american_landscape_7.jpg' },
-      { src: 'new_american_landscape_6.jpg' },
-      { src: 'new_american_landscape_5.jpg' },
-      { src: 'new_american_landscape_4.jpg' },
-      { src: 'new_american_landscape_1.jpg' },
-      { src: 'new_american_landscape_2.jpg' },
-      { src: 'new_american_landscape_3.jpg' }
-    ]
-  },
-
-  'year_2000': {
-    title: 'Year 2000',
-    imageRootSrc: 'year_2000',
-    href: '/projects/year_2000.html',
-    images: [
-      { src: 'year_2000_1.jpg' },
-      { src: 'year_2000_2.jpg' },
-      { src: 'year_2000_3.jpg' },
-      { src: 'year_2000_4.jpg' },
-      { src: 'year_2000_5.jpg' },
-      // { src: 'year_2000_6.jpg' },
-      { src: 'year_2000_7.jpg' }
-      // { src: 'year_2000_8.jpg' }
+      { src: 'new_landscapes_9.jpg' },
+      { src: 'new_landscapes_8.jpg' },
+      { src: 'new_landscapes_7.jpg' },
+      { src: 'new_landscapes_6.jpg' },
+      { src: 'new_landscapes_5.jpg' },
+      { src: 'new_landscapes_4.jpg' },
+      { src: 'new_landscapes_1.jpg' },
+      { src: 'new_landscapes_2.jpg' },
+      { src: 'new_landscapes_3.jpg' }
     ]
   }
 }
