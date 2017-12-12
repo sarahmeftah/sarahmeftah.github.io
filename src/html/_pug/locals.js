@@ -16,6 +16,17 @@ locals.getTitle = function (subtitle) {
 
 // Order defined is the same as nav order
 locals.projects = {
+  'beached': {
+    title: 'Beached',
+    imageRootSrc: 'beached',
+    href: '/projects/beached.html',
+    images: [
+      { src: 'image1.jpg' },
+      { src: 'image2.jpg' },
+      { src: 'image3.jpg' }
+    ]
+  },
+
   'the_sunset': {
     title: 'The Sunset',
     imageRootSrc: 'the_sunset',
@@ -29,7 +40,11 @@ locals.projects = {
       { src: 'image6.jpg' },
       { src: 'image7.jpg' },
       { src: 'image8.jpg' },
-      { src: 'image9.jpg' }
+      { src: 'image9.jpg' },
+      { src: 'image10.jpg' },
+      { src: 'image11.jpg' },
+      { src: 'image12.jpg' },
+      { src: 'image13.jpg' }
     ]
   },
 
@@ -46,7 +61,9 @@ locals.projects = {
       { src: 'image6.jpg' },
       { src: 'image7.jpg' },
       { src: 'image8.jpg' },
-      { src: 'image9.jpg' }
+      { src: 'image9.jpg' },
+      { src: 'image10.jpg' },
+      { src: 'image11.jpg' }
     ]
   },
 

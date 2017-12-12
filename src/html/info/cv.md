@@ -26,6 +26,13 @@ Ann Kirn Scholarship Award
 2015  
 *And Then There Was*, Phyllis Straus Gallery, Tallahassee, FL
 
+2017  
+*Here/Now*, Carolina Art Space, San Francisco, CA
+
+2018  
+*Interlude*, Carolina Art Space, San Francisco, CA
+
+
 **Education**  
 2015  
 BFA, Florida State University
