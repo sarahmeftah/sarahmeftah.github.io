@@ -77,8 +77,6 @@ a, a:hover, a:active, a:focus { text-decoration: none; }
 
 .art-vertical .art-thumb { display: block; padding-bottom: 20px; }
 
-.art-cover-container { position: relative; width: 100%; }
-
-.art-cover-old { position: absolute; left: 0; top: 0; }
+.art-cover-container { position: relative; width: 100%; height: auto; max-width: 800px; }
 
 /*# sourceMappingURL=main.css.map */
