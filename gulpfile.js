@@ -113,7 +113,6 @@ gulp.task('js', function () {
 gulp.task('img:thumbs', function () {
   var rename = require('gulp-rename')
   var imageResize = require('gulp-image-resize')
-
   return gulp.src(dirs.cloud + '/img/originals/**/*.jpg')
   .pipe(rename(function (path) {
     path.basename = path.basename.replace(/\s/g, '_').toLowerCase()
@@ -128,19 +127,34 @@ gulp.task('img:thumbs', function () {
   }))
   .pipe(gulp.dest(dirs.build + '/img/thumbs'))
 })
-gulp.task('img:copy', function () {
+gulp.task('img:cover', function () {
+  var imageResize = require('gulp-image-resize')
+  return gulp.src(dirs.cloud + '/img/front_page.jpg')
+    .pipe(imageResize({
+      width: 800,
+      height: 630,
+      crop: false,
+      upscale: false,
+      quality: 1,
+      imageMagick: true
+    }))
+    .pipe(gulp.dest(dirs.build + '/img'))
+})
+gulp.task('img:copyOriginals', function () {
   var rename = require('gulp-rename')
-
   return gulp.src([
-    dirs.cloud + '/img/**/*.jpg'
+    dirs.cloud + '/img/originals/**/*.jpg'
   ])
   .pipe(rename(function (path) {
     path.basename = path.basename.replace(/\s/g, '_').toLowerCase()
   }))
-  .pipe(gulp.dest(dirs.build + '/img'))
+  .pipe(gulp.dest(dirs.build + '/img/originals'))
 })
-
-gulp.task('img', ['img:copy', 'img:thumbs'])
+gulp.task('img', [
+  'img:copyOriginals',
+  'img:cover',
+  'img:thumbs'
+])
 
 gulp.task('bower', function () {
   var bower = require('gulp-bower')
