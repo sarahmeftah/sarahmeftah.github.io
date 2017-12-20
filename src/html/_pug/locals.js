@@ -44,7 +44,8 @@ locals.projects = {
       { src: 'image10.jpg' },
       { src: 'image11.jpg' },
       { src: 'image12.jpg' },
-      { src: 'image13.jpg' }
+      { src: 'image13.jpg' },
+      { src: 'image14.jpg' }
     ]
   },
 

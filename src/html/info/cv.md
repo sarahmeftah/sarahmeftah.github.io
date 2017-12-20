@@ -20,12 +20,8 @@ Ann Kirn Scholarship Award
 Ann Kirn Scholarship Award
 
 **Curatorial Experience**  
-2018  
-*Interlude*, Carolina Art Space, San Francisco, CA
-
 2017  
 *Here/Now*, Carolina Art Space, San Francisco, CA
-
 
 2016  
 *To Measure a Feeling*, Atelier Gallery, San Francisco, CA

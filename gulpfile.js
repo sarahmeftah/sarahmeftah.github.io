@@ -119,7 +119,7 @@ gulp.task('img:thumbs', function () {
   }))
   .pipe(imageResize({
     width: 2000,
-    height: 800,
+    height: 600,
     crop: false,
     upscale: false,
     quality: 1,
@@ -132,7 +132,7 @@ gulp.task('img:cover', function () {
   return gulp.src(dirs.cloud + '/img/front_page.jpg')
     .pipe(imageResize({
       width: 800,
-      height: 630,
+      height: 1200,
       crop: false,
       upscale: false,
       quality: 1,
