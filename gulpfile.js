@@ -183,10 +183,24 @@ gulp.task('deploy', ['build', 'img'], function () {
   }))
 })
 
+var externalIp = '120.0.0.1'
+gulp.task('resolveIp', function (done) {
+  var getIP = require('external-ip')()
+  getIP(function (err, ip) {
+    if (err) {
+      done(err)
+    } else {
+      externalIp = ip
+      console.log('External IP: ' + externalIp)
+      done()
+    }
+  })
+})
+
 /**
  * Demo server. Basic static express app pointing to the build folder
  */
-gulp.task('demo', function (done) {
+gulp.task('demo', ['resolveIp'], function (done) {
   var express = require('express')
   var http = require('http')
   var morgan = require('morgan')
@@ -208,6 +222,7 @@ gulp.task('demo', function (done) {
   server.on('listening', function () {
     console.log('Express app hosting static directory ', dirs.build)
     console.log('Listening on localhost ' + port)
+    console.log('Externally Accessable @ http://' + externalIp + ':' + port)
     done()
   })
   server.listen(port)
