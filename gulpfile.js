@@ -119,7 +119,7 @@ gulp.task('img:thumbs', function () {
   }))
   .pipe(imageResize({
     width: 2000,
-    height: 600,
+    height: 800,
     crop: false,
     upscale: false,
     quality: 1,
