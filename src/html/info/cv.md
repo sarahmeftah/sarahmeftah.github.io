@@ -2,6 +2,9 @@
 sarahameftah@gmail.com
 
 **Selected Exhibitions**  
+2018  
+*CCA Annual Staff Exhibition*, Hubbell Street Galleries, San Francisco, CA  
+
 2015  
 *BFA Thesis Exhibition*, FSU Museum of Fine Arts, Tallahassee, FL  
 *Art + Language*, Phyllis Straus Gallery, Tallahassee, FL  

@@ -7,6 +7,7 @@
   "main": "index.html",
   "scripts": {
     "build": "gulp build",
+    "gulp:img": "gulp img",
     "demo": "concurrently --kill-others \"gulp watch\" \"gulp demo\""
   },
   "author": "",
