@@ -131,7 +131,7 @@ gulp.task('img:cover', function () {
   var imageResize = require('gulp-image-resize')
   return gulp.src(dirs.cloud + '/img/front_page.jpg')
     .pipe(imageResize({
-      width: 800,
+      width: 1200,
       height: 1200,
       crop: false,
       upscale: false,
