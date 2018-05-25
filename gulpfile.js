@@ -128,16 +128,16 @@ gulp.task('img:thumbs', function () {
   .pipe(gulp.dest(dirs.build + '/img/thumbs'))
 })
 gulp.task('img:cover', function () {
-  var imageResize = require('gulp-image-resize')
+  // var imageResize = require('gulp-image-resize')
   return gulp.src(dirs.cloud + '/img/front_page.jpg')
-    .pipe(imageResize({
-      width: 1200,
-      height: 1200,
-      crop: false,
-      upscale: false,
-      quality: 1,
-      imageMagick: true
-    }))
+    // .pipe(imageResize({
+    //   width: 1200,
+    //   height: 1200,
+    //   crop: false,
+    //   upscale: false,
+    //   quality: 1,
+    //   imageMagick: true
+    // }))
     .pipe(gulp.dest(dirs.build + '/img'))
 })
 gulp.task('img:copyOriginals', function () {
