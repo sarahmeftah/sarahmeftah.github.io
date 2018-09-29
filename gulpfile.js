@@ -159,15 +159,15 @@ gulp.task('watch', gulp.series('build', function watchChangesToAutoBuild () {
 /**
  * Builds website and then deploys result to gitub pages branch
  */
-gulp.task('deploy', gulp.series(gulp.parallel('build', 'img'), function deployToGithubPages () {
+gulp.task('publishCurrentBuild', function deployToGithubPages () {
   var ghPages = require('gulp-gh-pages')
-
   return gulp.src(dirs.build + '/**/*')
-  .pipe(ghPages({
-    remoteUrl: pkg.repository,
-    force: true
-  }))
-}))
+    .pipe(ghPages({
+      remoteUrl: pkg.repository,
+      force: true
+    }))
+})
+gulp.task('deploy', gulp.series(gulp.parallel('build', 'img'), 'publishCurrentBuild'))
 
 var externalIp = '120.0.0.1'
 gulp.task('resolveIp', function (done) {
