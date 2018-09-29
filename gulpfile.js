@@ -156,15 +156,7 @@ gulp.task('img', [
   'img:thumbs'
 ])
 
-gulp.task('bower', function () {
-  var bower = require('gulp-bower')
-
-  return bower({
-    directory: dirs.build + '/bower_components'
-  })
-})
-
-gulp.task('build', ['bower', 'css', 'html', 'js', 'static'])
+gulp.task('build', ['css', 'html', 'js', 'static'])
 
 gulp.task('watch', ['build'], function () {
   return gulp.watch([dirs.src + '/**/*'], ['build'])

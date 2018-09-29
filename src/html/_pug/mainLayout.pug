@@ -34,7 +34,7 @@ html
         title= getTitle(title)
 
         //- CSS
-        link(type='text/css' rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u", crossorigin="anonymous")
         link(type='text/css' rel='stylesheet' href='/css/main.css')
         block localCSS
 
@@ -66,7 +66,7 @@ html
                         //- | &copy; #{(new Date()).getYear() + 1900} Sarah Meftah
 
         //- JAVASCRIPT
-        script(src='/bower_components/jquery/dist/jquery.min.js')
-        script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+        script(src='https://code.jquery.com/jquery-2.2.4.min.js')
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js", integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa", crossorigin="anonymous")
         script(src='/js/main.min.js')
         block localJS
