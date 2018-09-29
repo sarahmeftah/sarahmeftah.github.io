@@ -17,14 +17,14 @@ var dirs = {
 /**
  * Static files
  */
-gulp.task('static', function () {
+gulp.task('static', function copyStaticFilesToBuild () {
   return gulp.src(dirs.src + '/static/**/*').pipe(gulp.dest(dirs.build))
 })
 
 /**
  * CSS
  */
-gulp.task('css', function () {
+gulp.task('css', function compileSass () {
   var sass = require('gulp-sass')
   var autoprefixer = require('gulp-autoprefixer')
   var sourcemaps = require('gulp-sourcemaps')
@@ -51,7 +51,7 @@ gulp.task('css', function () {
 /**
  * HTML
  */
-gulp.task('html', function () {
+gulp.task('html', function compilePug () {
   var pug = require('gulp-pug')
   var md = require('jstransformer')(require('jstransformer-markdown-it'))
 
@@ -75,7 +75,7 @@ gulp.task('html', function () {
 /**
  * JS
  */
-gulp.task('js', function () {
+gulp.task('js', function minifyJs () {
   var rename = require('gulp-rename')
   var sourcemaps = require('gulp-sourcemaps')
   var uglify = require('gulp-uglify')
@@ -110,7 +110,7 @@ gulp.task('js', function () {
 /**
  * Resize base images to create needed sizes
  */
-gulp.task('img:thumbs', function () {
+gulp.task('img:thumbs', function createImageThumbnails () {
   var rename = require('gulp-rename')
   var imageResize = require('gulp-image-resize')
   return gulp.src(dirs.cloud + '/img/originals/**/*.jpg')
@@ -127,7 +127,7 @@ gulp.task('img:thumbs', function () {
   }))
   .pipe(gulp.dest(dirs.build + '/img/thumbs'))
 })
-gulp.task('img:cover', function () {
+gulp.task('img:cover', function copyImageCoverToBuild () {
   // var imageResize = require('gulp-image-resize')
   return gulp.src(dirs.cloud + '/img/front_page.jpg')
     // .pipe(imageResize({
@@ -140,7 +140,7 @@ gulp.task('img:cover', function () {
     // }))
     .pipe(gulp.dest(dirs.build + '/img'))
 })
-gulp.task('img:copyOriginals', function () {
+gulp.task('img:copyOriginals', function copyImageOriginalsToBuild () {
   var rename = require('gulp-rename')
   return gulp.src([
     dirs.cloud + '/img/originals/**/*.jpg'
@@ -150,22 +150,22 @@ gulp.task('img:copyOriginals', function () {
   }))
   .pipe(gulp.dest(dirs.build + '/img/originals'))
 })
-gulp.task('img', [
+gulp.task('img', gulp.series(
   'img:copyOriginals',
   'img:cover',
   'img:thumbs'
-])
+))
 
-gulp.task('build', ['css', 'html', 'js', 'static'])
+gulp.task('build', gulp.parallel('css', 'html', 'js', 'static'))
 
-gulp.task('watch', ['build'], function () {
+gulp.task('watch', gulp.series('build', function watchChangesToAutoBuild () {
   return gulp.watch([dirs.src + '/**/*'], ['build'])
-})
+}))
 
 /**
  * Builds website and then deploys result to gitub pages branch
  */
-gulp.task('deploy', ['build', 'img'], function () {
+gulp.task('deploy', gulp.series(gulp.parallel('build', 'img'), function deployToGithubPages () {
   var ghPages = require('gulp-gh-pages')
 
   return gulp.src(dirs.build + '/**/*')
@@ -173,7 +173,7 @@ gulp.task('deploy', ['build', 'img'], function () {
     remoteUrl: pkg.repository,
     force: true
   }))
-})
+}))
 
 var externalIp = '120.0.0.1'
 gulp.task('resolveIp', function (done) {
@@ -192,7 +192,7 @@ gulp.task('resolveIp', function (done) {
 /**
  * Demo server. Basic static express app pointing to the build folder
  */
-gulp.task('demo', ['resolveIp'], function (done) {
+gulp.task('demo', gulp.series('resolveIp', function runLocalDemo (done) {
   var express = require('express')
   var http = require('http')
   var morgan = require('morgan')
@@ -218,6 +218,6 @@ gulp.task('demo', ['resolveIp'], function (done) {
     done()
   })
   server.listen(port)
-})
+}))
 
-gulp.task('default', ['build'])
+gulp.task('default', gulp.series('build'))
