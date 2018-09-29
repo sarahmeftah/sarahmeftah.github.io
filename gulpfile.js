@@ -159,13 +159,11 @@ gulp.task('watch', gulp.series('build', function watchChangesToAutoBuild () {
 /**
  * Builds website and then deploys result to gitub pages branch
  */
-gulp.task('publishCurrentBuild', function deployToGithubPages () {
-  var ghPages = require('gulp-gh-pages')
-  return gulp.src(dirs.build + '/**/*')
-    .pipe(ghPages({
-      remoteUrl: pkg.repository,
-      force: true
-    }))
+gulp.task('publishCurrentBuild', function deployToGithubPages (done) {
+  var ghPages = require('gh-pages')
+  ghPages.publish(dirs.build, {
+    force: true
+  }, done)
 })
 gulp.task('deploy', gulp.series(gulp.parallel('build', 'img'), 'publishCurrentBuild'))
 
