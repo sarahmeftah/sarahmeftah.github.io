@@ -53,7 +53,6 @@ gulp.task('css', function compileSass () {
  */
 gulp.task('html', function compilePug () {
   var pug = require('gulp-pug')
-  var md = require('jstransformer')(require('jstransformer-markdown-it'))
 
   return gulp.src([
     dirs.src + '/html/**/*.pug',
@@ -62,12 +61,7 @@ gulp.task('html', function compilePug () {
   ])
   .pipe(pug({
     pretty: true,
-    locals: require(dirs.src + '/html/_pug/locals.js'),
-    filters: {
-      'markdown': function (str) {
-        return md.render(str).body
-      }
-    }
+    locals: require(dirs.src + '/html/_pug/locals.js')
   }))
   .pipe(gulp.dest(dirs.build))
 })
