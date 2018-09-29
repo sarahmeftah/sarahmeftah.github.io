@@ -16,16 +16,14 @@ locals.getTitle = function (subtitle) {
 
 // Order defined is the same as nav order
 locals.projects = {
-  'beached': {
-    title: 'Beached',
-    imageRootSrc: 'beached',
-    href: '/projects/beached.html',
+  'mystic': {
+    title: 'Mystic',
+    imageRootSrc: 'mystic',
+    href: '/projects/mystic.html',
     images: [
       { src: 'image1.jpg' },
       { src: 'image2.jpg' },
-      { src: 'image3.jpg' },
-      { src: 'image4.jpg' },
-      { src: 'image5.jpg' }
+      { src: 'image3.jpg' }
     ]
   },
 
