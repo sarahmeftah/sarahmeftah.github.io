@@ -159,7 +159,7 @@ gulp.task('img', gulp.series(
 gulp.task('build', gulp.parallel('css', 'html', 'js', 'static'))
 
 gulp.task('watch', gulp.series('build', function watchChangesToAutoBuild () {
-  return gulp.watch([dirs.src + '/**/*'], ['build'])
+  return gulp.watch(dirs.src + '/**/*', gulp.parallel('build'))
 }))
 
 /**
