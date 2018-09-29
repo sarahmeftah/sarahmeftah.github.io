@@ -160,6 +160,10 @@
         padding: $base-padding;
         padding-left: 0px;
         position: relative;
+
+        .content {
+           margin-top: 43px;
+        }
     }
 
     #wrapper.toggled #page-content-wrapper {

@@ -16,16 +16,14 @@ locals.getTitle = function (subtitle) {
 
 // Order defined is the same as nav order
 locals.projects = {
-  'beached': {
-    title: 'Beached',
-    imageRootSrc: 'beached',
-    href: '/projects/beached.html',
+  'mystic': {
+    title: 'Mystic',
+    imageRootSrc: 'mystic',
+    href: '/projects/mystic.html',
     images: [
       { src: 'image1.jpg' },
       { src: 'image2.jpg' },
-      { src: 'image3.jpg' },
-      { src: 'image4.jpg' },
-      { src: 'image5.jpg' }
+      { src: 'image3.jpg' }
     ]
   },
 
@@ -47,7 +45,17 @@ locals.projects = {
       { src: 'image11.jpg' },
       { src: 'image12.jpg' },
       { src: 'image13.jpg' },
-      { src: 'image14.jpg' }
+      { src: 'image14.jpg' },
+      { src: 'image15.jpg' },
+      { src: 'image16.jpg' },
+      { src: 'image17.jpg' },
+      { src: 'image18.jpg' },
+      { src: 'image19.jpg' },
+      { src: 'image20.jpg' },
+      { src: 'image21.jpg' },
+      { src: 'image22.jpg' },
+      { src: 'image23.jpg' },
+      { src: 'image24.jpg' }
     ]
   },
 
@@ -116,5 +124,16 @@ locals.infos = [
   { title: 'CV', href: '/info/cv.html' },
   { title: 'Contact', href: '/info/contact.html' }
 ]
+
+locals.og = {
+  image: 'http://sarahmeftah.com/img/link_preview.jpg',
+  url: 'http://sarahmeftah.com'
+}
+
+locals.links = {
+  homepage: {
+    coverImage: '/'
+  }
+}
 
 module.exports = locals

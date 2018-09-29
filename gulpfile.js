@@ -53,7 +53,6 @@ gulp.task('css', function compileSass () {
  */
 gulp.task('html', function compilePug () {
   var pug = require('gulp-pug')
-  var md = require('jstransformer')(require('jstransformer-markdown-it'))
 
   return gulp.src([
     dirs.src + '/html/**/*.pug',
@@ -62,12 +61,7 @@ gulp.task('html', function compilePug () {
   ])
   .pipe(pug({
     pretty: true,
-    locals: require(dirs.src + '/html/_pug/locals.js'),
-    filters: {
-      'markdown': function (str) {
-        return md.render(str).body
-      }
-    }
+    locals: require(dirs.src + '/html/_pug/locals.js')
   }))
   .pipe(gulp.dest(dirs.build))
 })
@@ -159,21 +153,21 @@ gulp.task('img', gulp.series(
 gulp.task('build', gulp.parallel('css', 'html', 'js', 'static'))
 
 gulp.task('watch', gulp.series('build', function watchChangesToAutoBuild () {
-  return gulp.watch([dirs.src + '/**/*'], ['build'])
+  return gulp.watch(dirs.src + '/**/*', gulp.parallel('build'))
 }))
 
 /**
  * Builds website and then deploys result to gitub pages branch
  */
-gulp.task('deploy', gulp.series(gulp.parallel('build', 'img'), function deployToGithubPages () {
+gulp.task('publishCurrentBuild', function deployToGithubPages () {
   var ghPages = require('gulp-gh-pages')
-
   return gulp.src(dirs.build + '/**/*')
-  .pipe(ghPages({
-    remoteUrl: pkg.repository,
-    force: true
-  }))
-}))
+    .pipe(ghPages({
+      remoteUrl: pkg.repository,
+      force: true
+    }))
+})
+gulp.task('deploy', gulp.series(gulp.parallel('build', 'img'), 'publishCurrentBuild'))
 
 var externalIp = '120.0.0.1'
 gulp.task('resolveIp', function (done) {

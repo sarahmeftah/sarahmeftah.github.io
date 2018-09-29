@@ -35,4 +35,8 @@ body, html {
     h1 {
         font-size: $base-fontSize-header;
     }
+
+    h1:first-child {
+      margin-top: 0;
+    }
 }
