@@ -6,6 +6,8 @@
 
 var locals = {}
 
+locals.currentYear = (new Date()).getYear() + 1900
+
 locals.baseTitle = 'Sarah Meftah'
 locals.getTitle = function (subtitle) {
   if (subtitle) {
@@ -16,14 +18,17 @@ locals.getTitle = function (subtitle) {
 
 // Order defined is the same as nav order
 locals.projects = {
-  'mystic': {
-    title: 'Mystic',
-    imageRootSrc: 'mystic',
-    href: '/projects/mystic.html',
+  'grim': {
+    title: 'Grim',
+    imageRootSrc: 'grim',
+    href: '/projects/grim.html',
     images: [
       { src: 'image1.jpg' },
       { src: 'image2.jpg' },
-      { src: 'image3.jpg' }
+      { src: 'image3.jpg' },
+      { src: 'image4.jpg' },
+      { src: 'image5.jpg' },
+      { src: 'image6.jpg' }
     ]
   },
 
@@ -54,8 +59,7 @@ locals.projects = {
       { src: 'image20.jpg' },
       { src: 'image21.jpg' },
       { src: 'image22.jpg' },
-      { src: 'image23.jpg' },
-      { src: 'image24.jpg' }
+      { src: 'image23.jpg' }
     ]
   },
 
@@ -132,7 +136,7 @@ locals.og = {
 
 locals.links = {
   homepage: {
-    coverImage: '/'
+    coverImage: '/projects/grim.html'
   }
 }
 
