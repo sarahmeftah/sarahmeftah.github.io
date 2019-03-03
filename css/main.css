@@ -80,6 +80,8 @@ a, a:hover, a:active, a:focus { text-decoration: none; }
 
 .art-vertical .art-thumb { display: block; padding-bottom: 20px; }
 
-.art-cover-container { position: relative; width: 100%; height: auto; max-width: 1200px; }
+.art-cover-container { position: relative; }
+
+.art-bio-container { position: relative; width: 100%; height: auto; max-width: 1200px; }
 
 /*# sourceMappingURL=main.css.map */
