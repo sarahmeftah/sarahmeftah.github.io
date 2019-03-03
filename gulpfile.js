@@ -104,10 +104,10 @@ gulp.task('js', function minifyJs () {
 /**
  * Resize base images to create needed sizes
  */
-gulp.task('img:thumbs', function createImageThumbnails () {
+gulp.task('img:generate:projectThumbnails', function createImageThumbnails () {
   var rename = require('gulp-rename')
   var imageResize = require('gulp-image-resize')
-  return gulp.src(dirs.cloud + '/img/originals/**/*.jpg')
+  return gulp.src(dirs.cloud + '/img/originals/projects/**/*.jpg')
   .pipe(rename(function (path) {
     path.basename = path.basename.replace(/\s/g, '_').toLowerCase()
   }))
@@ -119,35 +119,54 @@ gulp.task('img:thumbs', function createImageThumbnails () {
     quality: 1,
     imageMagick: true
   }))
-  .pipe(gulp.dest(dirs.build + '/img/thumbs'))
+  .pipe(gulp.dest(dirs.build + '/img/thumbs/projects'))
 })
-gulp.task('img:cover', function copyImageCoverToBuild () {
-  // var imageResize = require('gulp-image-resize')
+gulp.task('img:generate:bio', function createImageThumbnails () {
+  var imageResize = require('gulp-image-resize')
+  return gulp.src(dirs.cloud + '/img/originals/bio/bio.jpg')
+    .pipe(imageResize({
+      width: 1200,
+      crop: false,
+      upscale: false,
+      quality: 1,
+      imageMagick: true
+    }))
+    .pipe(gulp.dest(dirs.build + '/img/'))
+})
+gulp.task('img:generate:cover', function copyImageCoverToBuild () {
+  var imageResize = require('gulp-image-resize')
   return gulp.src(dirs.cloud + '/img/front_page.jpg')
-    // .pipe(imageResize({
-    //   width: 1200,
-    //   height: 1200,
-    //   crop: false,
-    //   upscale: false,
-    //   quality: 1,
-    //   imageMagick: true
-    // }))
-    .pipe(gulp.dest(dirs.build + '/img'))
+  .pipe(imageResize({
+    width: 3000,
+    crop: false,
+    upscale: false,
+    quality: 1,
+    imageMagick: true
+  }))
+  .pipe(gulp.dest(dirs.build + '/img'))
 })
-gulp.task('img:copyOriginals', function copyImageOriginalsToBuild () {
+gulp.task('img:copy:projectOriginals', function copyImageOriginalsToBuild () {
   var rename = require('gulp-rename')
   return gulp.src([
-    dirs.cloud + '/img/originals/**/*.jpg'
+    dirs.cloud + '/img/originals/projects/**/*.jpg'
   ])
   .pipe(rename(function (path) {
     path.basename = path.basename.replace(/\s/g, '_').toLowerCase()
   }))
-  .pipe(gulp.dest(dirs.build + '/img/originals'))
+  .pipe(gulp.dest(dirs.build + '/img/originals/projects/'))
 })
-gulp.task('img', gulp.series(
-  'img:copyOriginals',
-  'img:cover',
-  'img:thumbs'
+gulp.task('img:copy:linkPreview', function copyImageOriginalsToBuild () {
+  return gulp.src([
+    dirs.cloud + '/img/link_preview.jpg'
+  ])
+  .pipe(gulp.dest(dirs.build + '/img/'))
+})
+gulp.task('img', gulp.parallel(
+  'img:copy:projectOriginals',
+  'img:generate:cover',
+  'img:generate:projectThumbnails',
+  'img:generate:bio',
+  'img:copy:linkPreview'
 ))
 
 gulp.task('build', gulp.parallel('css', 'html', 'js', 'static'))
