@@ -8,6 +8,7 @@
   "scripts": {
     "build": "gulp build",
     "gulp:img": "gulp img",
+    "gulp:img:generate:cover": "gulp img:generate:cover",
     "deploy": "rm -rf ./build ./.publish; gulp deploy; rm -rf ./.publish",
     "demo": "concurrently --kill-others \"gulp watch\" \"gulp demo\""
   },

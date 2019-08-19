@@ -5,7 +5,7 @@
 
     .art-thumb {
         display: inline-block;
-        padding-right: $base-padding;
+        padding-right: $art-margin;
     }
 }
 .art-vertical {
@@ -13,7 +13,7 @@
 
     .art-thumb {
         display: block;
-        padding-bottom: $base-padding;
+        padding-bottom: $art-margin;
     }
 }
 
