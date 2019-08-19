@@ -74,11 +74,11 @@ a, a:hover, a:active, a:focus { text-decoration: none; }
 
 .art-horizontal { display: block; white-space: nowrap; }
 
-.art-horizontal .art-thumb { display: inline-block; padding-right: 20px; }
+.art-horizontal .art-thumb { display: inline-block; padding-right: 50px; }
 
 .art-vertical { display: block; }
 
-.art-vertical .art-thumb { display: block; padding-bottom: 20px; }
+.art-vertical .art-thumb { display: block; padding-bottom: 50px; }
 
 .art-cover-container { position: relative; }
 
