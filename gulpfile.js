@@ -113,7 +113,7 @@ gulp.task('img:generate:projectThumbnails', function createImageThumbnails () {
   }))
   .pipe(imageResize({
     width: 2000,
-    height: 800,
+    height: 1100,
     crop: false,
     upscale: false,
     quality: 1,
@@ -138,7 +138,7 @@ gulp.task('img:generate:cover', function copyImageCoverToBuild () {
   return gulp.src(dirs.cloud + '/img/front_page.jpg')
   .pipe(imageResize({
     // width: 3500,
-    height: 1000,
+    height: 1100,
     crop: false,
     upscale: false,
     quality: 1,

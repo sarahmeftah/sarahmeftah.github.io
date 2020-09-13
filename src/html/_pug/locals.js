@@ -31,7 +31,10 @@ locals.projects = {
       { src: 'image6.jpg' },
       { src: 'image7.jpg' },
       { src: 'image8.jpg' },
-      { src: 'image9.jpg' }
+      { src: 'image9.jpg' },
+      { src: 'image10.jpg' },
+      { src: 'image11.jpg' },
+      { src: 'image12.jpg' }
     ]
   },
 
@@ -92,20 +95,16 @@ locals.projects = {
     imageRootSrc: 'nightwatch',
     href: '/projects/nightwatch.html',
     images: [
-      { src: 'bamboo-house.jpg' },
-      { src: 'red-lot.jpg' },
-      { src: 'hotel-room-with-a-view.jpg' },
-      // { src: 'woman-with-bag.jpg' },
-      { src: 'house-on-beard-street.jpg' },
-      // { src: 'leon-high-school.jpg' },
-      // { src: 'man-with-bag.jpg' },
-      { src: 'prince-murat-motel.jpg' },
-      { src: 'stars-meat-market-no-1.jpg' },
-      // { src: 'stars-meat-market-no-2.jpg' },
-      // { src: 'parking-garage.jpg' },
-      { src: 'post-office.jpg' },
-      { src: 'lamp-and-shade.jpg' },
-      { src: 'house-on-the-corner.jpg' }
+      { src: '1_bamboo-house.jpg' },
+      { src: '2_red-lot.jpg' },
+      { src: '3_hotel-room-with-a-view.jpg' },
+      { src: '4_house-on-beard-street.jpg' },
+      { src: '5_prince-murat-motel.jpg' },
+      { src: '6_stars-meat-market-no-1.jpg' },
+      { src: '7_post-office.jpg' },
+      { src: '8_cemetery.jpg' },
+      { src: '9_lamp-and-shade.jpg' },
+      { src: '10_house-on-the-corner.jpg' }
     ]
   },
 
@@ -114,15 +113,15 @@ locals.projects = {
     imageRootSrc: 'new_landscapes',
     href: '/projects/new_landscapes.html',
     images: [
-      { src: 'new_landscapes_9.jpg' },
-      { src: 'new_landscapes_8.jpg' },
-      { src: 'new_landscapes_7.jpg' },
-      { src: 'new_landscapes_6.jpg' },
-      { src: 'new_landscapes_5.jpg' },
-      { src: 'new_landscapes_4.jpg' },
-      // { src: 'new_landscapes_1.jpg' },
+      { src: 'new_landscapes_1.jpg' },
       { src: 'new_landscapes_2.jpg' },
-      { src: 'new_landscapes_3.jpg' }
+      { src: 'new_landscapes_3.jpg' },
+      { src: 'new_landscapes_4.jpg' },
+      { src: 'new_landscapes_5.jpg' },
+      { src: 'new_landscapes_6.jpg' },
+      { src: 'new_landscapes_7.jpg' },
+      { src: 'new_landscapes_8.jpg' },
+      { src: 'new_landscapes_9.jpg' }
     ]
   }
 }
