@@ -4,7 +4,7 @@
 
 #wrapper.toggled { padding-left: 220px; }
 
-#topbar-wrapper { z-index: 1001; position: fixed; display: block; top: 0; left: 0px; padding-left: 20px; height: 60px; line-height: 60px; width: 100%; background-color: #FFFFFF; }
+#topbar-wrapper { z-index: 1001; position: fixed; display: block; top: 0; left: 0px; padding-left: 20px; height: 60px; line-height: 60px; width: 100vw; background-color: #FFFFFF; }
 
 #topbar-wrapper > * { pointer-events: auto; }
 
@@ -23,6 +23,8 @@
 #wrapper.toggled #sidebar-wrapper { width: 220px; }
 
 #page-content-wrapper { width: 100%; position: absolute; padding: 60px 15px 15px 15px; }
+
+#page-content-wrapper .content { overflow-x: scroll; }
 
 #wrapper.toggled #page-content-wrapper { position: absolute; margin-right: -200px; }
 
@@ -48,7 +50,7 @@
   #sidebar-wrapper { width: 220px; }
   #wrapper.toggled #sidebar-wrapper { width: 0; }
   #page-content-wrapper { padding: 20px; padding-left: 0px; position: relative; }
-  #page-content-wrapper .content { margin-top: 43px; }
+  #page-content-wrapper .content { overflow-x: inherit; margin-top: 43px; }
   #wrapper.toggled #page-content-wrapper { position: relative; margin-right: 0; }
   #topbar-wrapper button { display: none; } }
 
@@ -58,7 +60,7 @@ body, html { width: 100%; height: 100%; background-color: #FFFFFF; }
 
 #page-content-wrapper .content { white-space: normal; -ms-flex-positive: 1; flex-grow: 1; }
 
-#page-content-wrapper .footer { margin-top: 2em; }
+#page-content-wrapper .footer { margin-top: 1.75em; }
 
 .page-info { display: block; padding-bottom: 20px; width: 100%; max-width: 700px; }
 
@@ -74,11 +76,17 @@ a, a:hover, a:active, a:focus { text-decoration: none; }
 
 .art-horizontal { display: block; white-space: nowrap; }
 
-.art-horizontal .art-thumb { display: inline-block; padding-right: 100px; }
+.art-horizontal .art-thumb { display: inline-block; padding-right: 20vh; }
+
+.art-horizontal .art-thumb:last-child { padding-right: 0; }
 
 .art-vertical { display: block; }
 
-.art-vertical .art-thumb { display: block; padding-bottom: 100px; }
+.art-vertical .art-thumb { display: block; padding-bottom: 20vh; }
+
+.art-thumb img { max-height: 85vh; }
+
+.art-cover { max-height: 85vh; }
 
 .art-cover-container { position: relative; }
 
