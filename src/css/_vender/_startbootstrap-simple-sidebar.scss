@@ -27,7 +27,7 @@
     padding-left: $base-padding;
     height: $topbar-height;
     line-height: $topbar-height;
-    width: 100%;
+    width: 100vw;
     background-color: $base-background;
 
     > * {
@@ -83,6 +83,10 @@
     width: 100%;
     position: absolute;
     padding: $topbar-height $base-padding-sm $base-padding-sm $base-padding-sm;
+
+    .content {
+       overflow-x: scroll;
+    }
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -161,8 +165,10 @@
         padding-left: 0px;
         position: relative;
 
+
         .content {
-           margin-top: 43px;
+          overflow-x: inherit;
+          margin-top: 43px;
         }
     }
 

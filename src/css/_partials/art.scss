@@ -6,6 +6,10 @@
     .art-thumb {
         display: inline-block;
         padding-right: $art-margin;
+
+        &:last-child {
+          padding-right: 0;
+        }
     }
 }
 .art-vertical {
@@ -15,6 +19,18 @@
         display: block;
         padding-bottom: $art-margin;
     }
+
+
+}
+
+.art-thumb {
+  img {
+    max-height: 85vh;
+  }
+}
+
+.art-cover {
+  max-height: 85vh;
 }
 
 
