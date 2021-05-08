@@ -112,7 +112,7 @@ gulp.task('img:generate:projectThumbnails', function createImageThumbnails () {
     path.basename = path.basename.replace(/\s/g, '_').toLowerCase()
   }))
   .pipe(imageResize({
-    width: 2000,
+    // width: 2000,
     height: 1100,
     crop: false,
     upscale: false,

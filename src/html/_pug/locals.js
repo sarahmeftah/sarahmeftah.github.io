@@ -48,7 +48,7 @@ locals.projects = {
       { src: 'image3.jpg' },
       { src: 'image4.jpg' },
       { src: 'image5.jpg' },
-      { src: 'image6.jpg' },
+      // { src: 'image6.jpg' },
       { src: 'image7.jpg' },
       { src: 'image8.jpg' },
       { src: 'image9.jpg' },
@@ -67,7 +67,8 @@ locals.projects = {
       { src: 'image22.jpg' },
       { src: 'image23.jpg' },
       { src: 'image24.jpg' },
-      { src: 'image25.jpg' }
+      { src: 'image25.jpg' },
+      { src: 'image26.jpg' }
     ]
   },
 
@@ -122,6 +123,15 @@ locals.projects = {
       { src: 'new_landscapes_7.jpg' },
       { src: 'new_landscapes_8.jpg' },
       { src: 'new_landscapes_9.jpg' }
+    ]
+  },
+
+  '2013-2017': {
+    title: '2013-2017',
+    imageRootSrc: '2013-2017',
+    href: '/projects/2013-2017.html',
+    images: [
+      { src: 'image_scroll.jpg' }
     ]
   }
 }
